@@ -1,0 +1,116 @@
+# dune utop src
+# OCAMLPARAM: unset
+# Workspace root: /mnt/c/Users/Jack/cmsc330fall21/project4a
+$ /usr/bin/nproc > /tmp/dune97199e.output 2> /dev/null
+# Auto-detected concurrency: 8
+# disable binary cache
+$ /home/gillickj/.opam/4.11.0/bin/ocamlc.opt -config > /tmp/dune4c4cce.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dyn
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/home/gillickj/.opam/4.11.0/lib/toplevel"
+#  ; ocaml_bin = External "/home/gillickj/.opam/4.11.0/bin"
+#  ; ocaml = Ok External "/home/gillickj/.opam/4.11.0/bin/ocaml"
+#  ; ocamlc = External "/home/gillickj/.opam/4.11.0/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/home/gillickj/.opam/4.11.0/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/home/gillickj/.opam/4.11.0/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/home/gillickj/.opam/4.11.0/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/home/gillickj/.opam/4.11.0/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/home/gillickj/.opam/4.11.0/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/mnt/c/Users/Jack/cmsc330fall21/project4a"
+#        ; "INSIDE_DUNE" :
+#            "/mnt/c/Users/Jack/cmsc330fall21/project4a/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/mnt/c/Users/Jack/cmsc330fall21/project4a/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/mnt/c/Users/Jack/cmsc330fall21/project4a/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/mnt/c/Users/Jack/cmsc330fall21/project4a/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path = [ External "/home/gillickj/.opam/4.11.0/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.11.0"
+#      ; standard_library_default = "/home/gillickj/.opam/4.11.0/lib/ocaml"
+#      ; standard_library = "/home/gillickj/.opam/4.11.0/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "gcc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-fPIC" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-fPIC" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-ldl"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm"; "-ldl" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "linux"
+#      ; asm = [ "as" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-pc-linux-gnu"
+#      ; target = "x86_64-pc-linux-gnu"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X028"
+#      ; cmi_magic_number = "Caml1999I028"
+#      ; cmo_magic_number = "Caml1999O028"
+#      ; cma_magic_number = "Caml1999A028"
+#      ; cmx_magic_number = "Caml1999Y028"
+#      ; cmxa_magic_number = "Caml1999Z028"
+#      ; ast_impl_magic_number = "Caml1999M028"
+#      ; ast_intf_magic_number = "Caml1999N028"
+#      ; cmxs_magic_number = "Caml1999D028"
+#      ; cmt_magic_number = "Caml1999T028"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /home/gillickj/.opam/4.11.0/bin/ocamldep.opt -modules -impl src/parser.ml) > _build/default/src/.p4a.objs/parser.ml.d
+$ (cd _build/default && /home/gillickj/.opam/4.11.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -27-32-33-34-39 -g -bin-annot -I src/.p4a.objs/byte -intf-suffix .ml -no-alias-deps -opaque -open P4a -o src/.p4a.objs/byte/p4a__Parser.cmo -c -impl src/parser.ml)
+$ (cd _build/default && /home/gillickj/.opam/4.11.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -27-32-33-34-39 -g -a -o src/p4a.cma src/.p4a.objs/byte/p4a.cmo src/.p4a.objs/byte/p4a__TokenTypes.cmo src/.p4a.objs/byte/p4a__Lexer.cmo src/.p4a.objs/byte/p4a__MicroCamlTypes.cmo src/.p4a.objs/byte/p4a__Utils.cmo src/.p4a.objs/byte/p4a__Parser.cmo)
+$ (cd _build/default && /home/gillickj/.opam/4.11.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -24 -g -o src/.utop/utop.exe -output-complete-exe /home/gillickj/.opam/4.11.0/lib/ocaml/compiler-libs/ocamlcommon.cma /home/gillickj/.opam/4.11.0/lib/ocaml/compiler-libs/ocamlbytecomp.cma /home/gillickj/.opam/4.11.0/lib/ocaml/compiler-libs/ocamltoplevel.cma /home/gillickj/.opam/4.11.0/lib/findlib/findlib.cma /home/gillickj/.opam/4.11.0/lib/findlib/findlib_top.cma /home/gillickj/.opam/4.11.0/lib/result/result.cma /home/gillickj/.opam/4.11.0/lib/lwt/lwt.cma /home/gillickj/.opam/4.11.0/lib/ocaml/unix.cma -I /home/gillickj/.opam/4.11.0/lib/ocaml /home/gillickj/.opam/4.11.0/lib/ocaml/bigarray.cma -I /home/gillickj/.opam/4.11.0/lib/ocaml /home/gillickj/.opam/4.11.0/lib/mmap/mmap.cma /home/gillickj/.opam/4.11.0/lib/ocplib-endian/ocplib_endian.cma /home/gillickj/.opam/4.11.0/lib/ocplib-endian/bigstring/ocplib_endian_bigstring.cma /home/gillickj/.opam/4.11.0/lib/ocaml/threads/threads.cma -I /home/gillickj/.opam/4.11.0/lib/ocaml /home/gillickj/.opam/4.11.0/lib/lwt/unix/lwt_unix.cma -I /home/gillickj/.opam/4.11.0/lib/lwt/unix /home/gillickj/.opam/4.11.0/lib/react/react.cma /home/gillickj/.opam/4.11.0/lib/lwt_react/lwt_react.cma /home/gillickj/.opam/4.11.0/lib/camomile/default_config/camomileDefaultConfig.cma /home/gillickj/.opam/4.11.0/lib/camomile/library/camomileLibrary.cma /home/gillickj/.opam/4.11.0/lib/camomile/lib_default/camomileLibraryDefault.cma /home/gillickj/.opam/4.11.0/lib/camomile/dyn/camomileLibraryDyn.cma /home/gillickj/.opam/4.11.0/lib/camomile/camomile_yuge.cma /home/gillickj/.opam/4.11.0/lib/charInfo_width/charInfo_width.cma /home/gillickj/.opam/4.11.0/lib/zed/zed.cma /home/gillickj/.opam/4.11.0/lib/lwt_log/core/lwt_log_core.cma /home/gillickj/.opam/4.11.0/lib/lwt_log/lwt_log.cma /home/gillickj/.opam/4.11.0/lib/trie/trie.cma /home/gillickj/.opam/4.11.0/lib/mew/mew.cma /home/gillickj/.opam/4.11.0/lib/mew_vi/mew_vi.cma /home/gillickj/.opam/4.11.0/lib/lambda-term/lambda_term.cma -I /home/gillickj/.opam/4.11.0/lib/lambda-term /home/gillickj/.opam/4.11.0/lib/utop/uTop.cma /home/gillickj/.opam/4.11.0/lib/ocaml/str.cma -I /home/gillickj/.opam/4.11.0/lib/ocaml src/p4a.cma src/.utop/.utop.eobjs/byte/dune__exe__Utop.cmo -linkall -warn-error -31)
